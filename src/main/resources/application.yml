@@ -1,0 +1,10 @@
+server:
+  port: 9801 # 服务端口
+spring:
+  application:
+    name: monster-eureka # eureka的服务名称
+eureka:
+  client:
+    service-url:
+      # eureka的地址信息（因为eureka也是一个微服务，也要注册到注册中心里）
+      defaultZone: http://localhost:${server.port}/eureka
